@@ -1,1 +1,1 @@
-## CSE-222 (DATA STRUCTURE AND ALGORITHMS) HOMEWORKS
+## CSE-222 (Data Structure and Algorithms) Assignments
