@@ -20,12 +20,11 @@ public class Main {
         System.out.println("Clockwise iterator's hasNext(), next(), getCurrData() methods are being tested.");
         System.out.println("Numbers are being printed as clockwise...");
         while(cwItr.hasNext()){
-            System.out.print(cwItr.getCurrData()+" ");
-            cwItr.next();
+            System.out.print(cwItr.next()+" ");
         }
-        System.out.println(cwItr.getCurrData());
-        System.out.println("---------------------------------------------");
+        System.out.println("\n---------------------------------------------");
         System.out.println("Clockwise iterator's reset method is being tesed.");
+
         cwItr.reset();
         System.out.println("---------------------------------------------");
         // clockwise taken data is being printed using iterator's hasNext() and next() methods.
@@ -35,3 +34,4 @@ public class Main {
 
     }
 }
+

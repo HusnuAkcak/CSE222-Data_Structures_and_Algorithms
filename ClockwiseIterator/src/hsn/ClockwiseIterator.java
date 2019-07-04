@@ -19,17 +19,9 @@ public class ClockwiseIterator implements Iterator<Integer> {
         itrClockwise(matrix, 0,0, 0, Direction.RIGHT);
     }
 
-    /**
-     * returns the data that is seen lastly by iterator
-     * @return current Integer on the list
-     */
-    public Integer getCurrData(){
-        return arr[index];
-    }
-
     @Override
     public boolean hasNext() {
-        return !( (arr.length-1) == index );
+        return (index < arr.length);
     }
 
     /**
@@ -39,7 +31,7 @@ public class ClockwiseIterator implements Iterator<Integer> {
     @Override
     public Integer next() {
         if(hasNext())
-            return arr[++index];
+            return arr[index++];
 
         return null;
     }
@@ -49,10 +41,9 @@ public class ClockwiseIterator implements Iterator<Integer> {
      */
     public void print(){
         while(hasNext()) {
-            System.out.print(getCurrData() + " ");
-            next();
+            System.out.print( next() + " ");
+
         }
-        System.out.println(getCurrData());
         index = 0; // index is reset.
     }
 
@@ -62,6 +53,7 @@ public class ClockwiseIterator implements Iterator<Integer> {
     public void reset() {
         index = 0;
     }
+
     /**
      * Iterate give matrix in clockwise while doing that copy all data from matrix to
      * arr field as clockwise.
